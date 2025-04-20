@@ -12,17 +12,17 @@ const successMessage = ref('');
 const visibleLogos = ref([]);
 
 const techLogos = ref([
-  { src: 'src/assets/logo1.png', alt: 'Google' },
-  { src: 'src/assets/logo2.png', alt: 'NVIDIA' },
-  { src: 'src/assets/logo3.png', alt: 'Microsoft' },
-  { src: 'src/assets/logo4.png', alt: 'Anthropic' },
-  { src: 'src/assets/logo5.png', alt: 'OpenAI' },
-  { src: 'src/assets/logo6.png', alt: 'Meta' },
-  { src: 'src/assets/logo7.png', alt: 'Amazon' },
-  { src: 'src/assets/logo8.png', alt: 'Apple' },
-  { src: 'src/assets/logo9.png', alt: 'IBM' },
-  { src: 'src/assets/logo10.png', alt: 'Tesla' },
-  { src: 'src/assets/logo11.png', alt: 'CreateX' },
+  { src: '/codecomposite/src/assets/logo1.png', alt: 'Google' },
+  { src: '/codecomposite/src/assets/logo2.png', alt: 'NVIDIA' },
+  { src: '/codecomposite/src/assets/logo3.png', alt: 'Microsoft' },
+  { src: '/codecomposite/src/assets/logo4.png', alt: 'Anthropic' },
+  { src: '/codecomposite/src/assets/logo5.png', alt: 'OpenAI' },
+  { src: '/codecomposite/src/assets/logo6.png', alt: 'Meta' },
+  { src: '/codecomposite/src/assets/logo7.png', alt: 'Amazon' },
+  { src: '/codecomposite/src/assets/logo8.png', alt: 'Apple' },
+  { src: '/codecomposite/src/assets/logo9.png', alt: 'IBM' },
+  { src: '/codecomposite/src/assets/logo10.png', alt: 'Tesla' },
+  { src: '/codecomposite/src/assets/logo11.png', alt: 'CreateX' },
 ]);
 
 const rotateLogos = () => {
