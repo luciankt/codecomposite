@@ -243,6 +243,8 @@ header {
   scrollbar-width: none; 
   scroll-behavior: smooth; 
   justify-content: center; 
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .carousel-container::-webkit-scrollbar {
