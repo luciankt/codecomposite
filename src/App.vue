@@ -25,12 +25,6 @@ const techLogos = ref([
   { src: new URL('./assets/logo11.png', import.meta.url).href, alt: 'CreateX' },
 ]);
 
-const rotateLogos = () => {
-  const firstLogo = techLogos.value.shift(); // Remove the first logo
-  techLogos.value.push(firstLogo); // Add it to the end
-  visibleLogos.value = techLogos.value.slice(0, 3); // Update visible logos
-};
-
 const toggleDarkMode = () => {
   isDarkMode.value = !isDarkMode.value;
   document.documentElement.classList.toggle('dark-mode', isDarkMode.value);
@@ -73,19 +67,19 @@ const handleSignup = () => {
     <section class="carousel">
       <div class="carousel-container">
         <div class="carousel-item">
-          <video autoplay muted loop>
+          <video autoplay muted loop playsinline>
             <source src="./assets/video1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="carousel-item">
-          <video autoplay muted loop>
+          <video autoplay muted loop playsinline>
             <source src="./assets/video1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="carousel-item">
-          <video autoplay muted loop>
+          <video autoplay muted loop playsinline>
             <source src="./assets/video1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -107,7 +101,6 @@ const handleSignup = () => {
             >
               <img :src="logo.src" :alt="logo.alt" />
             </div>
-            <!-- Duplicate the logos for seamless looping -->
             <div
               class="tech-carousel-item"
               v-for="(logo, index) in techLogos"
@@ -339,7 +332,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Hide overflowing logos */
+  overflow: hidden;
   padding: 1rem 0;
   width: 100%;
   background-color: var(--background-color);
@@ -350,7 +343,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Hide overflowing logos */
+  overflow: hidden;
   padding: 1rem 0;
   width: 100%;
 }
@@ -358,7 +351,7 @@ header {
 .tech-carousel-container {
   display: flex;
   gap: 1rem;
-  animation: scroll 20s linear infinite; /* Smooth scrolling animation */
+  animation: scroll 20s linear infinite;
 }
 
 .tech-carousel-item {
@@ -385,7 +378,7 @@ header {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Move halfway to loop seamlessly */
+    transform: translateX(-50%);
   }
 }
 </style>
