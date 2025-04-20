@@ -12,17 +12,17 @@ const successMessage = ref('');
 const visibleLogos = ref([]);
 
 const techLogos = ref([
-  { src: '/codecomposite/src/assets/logo1.png', alt: 'Google' },
-  { src: '/codecomposite/src/assets/logo2.png', alt: 'NVIDIA' },
-  { src: '/codecomposite/src/assets/logo3.png', alt: 'Microsoft' },
-  { src: '/codecomposite/src/assets/logo4.png', alt: 'Anthropic' },
-  { src: '/codecomposite/src/assets/logo5.png', alt: 'OpenAI' },
-  { src: '/codecomposite/src/assets/logo6.png', alt: 'Meta' },
-  { src: '/codecomposite/src/assets/logo7.png', alt: 'Amazon' },
-  { src: '/codecomposite/src/assets/logo8.png', alt: 'Apple' },
-  { src: '/codecomposite/src/assets/logo9.png', alt: 'IBM' },
-  { src: '/codecomposite/src/assets/logo10.png', alt: 'Tesla' },
-  { src: '/codecomposite/src/assets/logo11.png', alt: 'CreateX' },
+  { src: new URL('./assets/logo1.png', import.meta.url).href, alt: 'Google' },
+  { src: new URL('./assets/logo2.png', import.meta.url).href, alt: 'NVIDIA' },
+  { src: new URL('./assets/logo3.png', import.meta.url).href, alt: 'Microsoft' },
+  { src: new URL('./assets/logo4.png', import.meta.url).href, alt: 'Anthropic' },
+  { src: new URL('./assets/logo5.png', import.meta.url).href, alt: 'OpenAI' },
+  { src: new URL('./assets/logo6.png', import.meta.url).href, alt: 'Meta' },
+  { src: new URL('./assets/logo7.png', import.meta.url).href, alt: 'Amazon' },
+  { src: new URL('./assets/logo8.png', import.meta.url).href, alt: 'Apple' },
+  { src: new URL('./assets/logo9.png', import.meta.url).href, alt: 'IBM' },
+  { src: new URL('./assets/logo10.png', import.meta.url).href, alt: 'Tesla' },
+  { src: new URL('./assets/logo11.png', import.meta.url).href, alt: 'CreateX' },
 ]);
 
 const rotateLogos = () => {
