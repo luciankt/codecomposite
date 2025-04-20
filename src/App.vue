@@ -80,13 +80,13 @@ const handleSignup = () => {
         </div>
         <div class="carousel-item">
           <video autoplay muted loop>
-            <source src="./assets/video2.mp4" type="video/mp4" />
+            <source src="./assets/video1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="carousel-item">
           <video autoplay muted loop>
-            <source src="./assets/video3.mp4" type="video/mp4" />
+            <source src="./assets/video1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
