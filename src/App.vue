@@ -362,7 +362,7 @@ header {
 .tech-carousel-container {
   display: flex;
   gap: 1rem;
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 .tech-carousel-item {
