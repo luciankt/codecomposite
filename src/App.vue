@@ -86,6 +86,11 @@ const handleSignup = () => {
             <source src="./assets/video4.mp4" type="video/mp4" />
           </video>
         </div>
+        <div class="carousel-item">
+          <video autoplay muted loop playsinline>
+            <source src="./assets/video5.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
     </section>
 
