@@ -12,17 +12,17 @@ const successMessage = ref('');
 const visibleLogos = ref([]);
 
 const techLogos = ref([
-  { src: new URL('./assets/logo1.png', import.meta.url).href, alt: 'Google' },
-  { src: new URL('./assets/logo2.png', import.meta.url).href, alt: 'NVIDIA' },
-  { src: new URL('./assets/logo3.png', import.meta.url).href, alt: 'Microsoft' },
-  { src: new URL('./assets/logo4.png', import.meta.url).href, alt: 'Anthropic' },
-  { src: new URL('./assets/logo5.png', import.meta.url).href, alt: 'OpenAI' },
-  { src: new URL('./assets/logo6.png', import.meta.url).href, alt: 'Meta' },
-  { src: new URL('./assets/logo7.png', import.meta.url).href, alt: 'Amazon' },
-  { src: new URL('./assets/logo8.png', import.meta.url).href, alt: 'Apple' },
-  { src: new URL('./assets/logo9.png', import.meta.url).href, alt: 'IBM' },
-  { src: new URL('./assets/logo10.png', import.meta.url).href, alt: 'Tesla' },
-  { src: new URL('./assets/logo11.png', import.meta.url).href, alt: 'CreateX' },
+  { src: new URL('./assets/cat1.jpg', import.meta.url).href, alt: 'Google' },
+  { src: new URL('./assets/cat2.jpg', import.meta.url).href, alt: 'NVIDIA' },
+  { src: new URL('./assets/cat3.jpg', import.meta.url).href, alt: 'Microsoft' },
+  { src: new URL('./assets/cat4.jpg', import.meta.url).href, alt: 'Anthropic' },
+  { src: new URL('./assets/cat5.jpg', import.meta.url).href, alt: 'OpenAI' },
+  { src: new URL('./assets/cat6.jpg', import.meta.url).href, alt: 'Meta' },
+  { src: new URL('./assets/cat7.jpg', import.meta.url).href, alt: 'Amazon' },
+  { src: new URL('./assets/cat8.jpg', import.meta.url).href, alt: 'Apple' },
+  { src: new URL('./assets/cat9.jpg', import.meta.url).href, alt: 'IBM' },
+  { src: new URL('./assets/cat10.jpg', import.meta.url).href, alt: 'Tesla' },
+  { src: new URL('./assets/cat11.jpg', import.meta.url).href, alt: 'CreateX' },
 ]);
 
 const toggleDarkMode = () => {
@@ -69,19 +69,21 @@ const handleSignup = () => {
         <div class="carousel-item">
           <video autoplay muted loop playsinline>
             <source src="./assets/video1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </div>
         <div class="carousel-item">
           <video autoplay muted loop playsinline>
-            <source src="./assets/video1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+            <source src="./assets/video2.mp4" type="video/mp4" />
           </video>
         </div>
         <div class="carousel-item">
           <video autoplay muted loop playsinline>
-            <source src="./assets/video1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+            <source src="./assets/video3.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="carousel-item">
+          <video autoplay muted loop playsinline>
+            <source src="./assets/video4.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
@@ -89,9 +91,12 @@ const handleSignup = () => {
 
     <section class="investment">
 
-      <h2>Investment Funding</h2>
+      <!-- <h2>Investment Funding</h2>
         <p>We are <s>proud</s> to announce that CodeComposite has secured $0 in seed funding to revolutionize video editing for developers and creators.</p>
-        <p>See some of the companies we admire:</p>
+        <p>See some of the companies we admire:</p> -->
+      <h2>Create Anything!</h2>
+        <p>Now you can make as many cat video edits as your heart desires! (Or non-feline content).</p>
+        <p>See some of our favorite cat pics here:</p>
         <section class="tech-carousel">
         <div class="tech-carousel-container">
             <div
@@ -112,15 +117,17 @@ const handleSignup = () => {
       </section>
     </section>
 
-    <section class="cta">
-      <h2>Join Our Mailing List</h2>
-      <p>Stay updated with the latest features and updates.</p>
-      <form @submit.prevent="handleSignup" class="email-signup-form">
-        <input type="email" v-model="email" placeholder="Enter your email" required />
-        <button type="submit" class="cta-button">Sign Up</button>
-      </form>
-      <p v-if="successMessage" class="success-message">{{ successMessage }}</p>
-    </section>
+    <a href="https://forms.gle/jbFHJJn4RqCSioEa8" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+      <section class="cta">
+        <h2>Join Our Mailing List</h2>
+        <p>Stay updated with the latest features and updates.</p>
+        <form @submit.prevent="handleSignup" class="email-signup-form">
+          <input type="email" v-model="email" placeholder="Enter your email" required />
+          <!-- <button type="submit" class="cta-button">Sign Up</button> -->
+        </form>
+        <p v-if="successMessage" class="success-message">{{ successMessage }}</p>
+      </section>
+    </a>
   </main>
 </template>
 
@@ -239,33 +246,35 @@ header {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 1rem;
-  padding: 1rem 0;
-  scrollbar-width: none; 
-  scroll-behavior: smooth; 
-  justify-content: center; 
+  padding: 1rem;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
   margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .carousel-container::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .carousel-item {
-  flex: 0 0 80%; 
-  max-width: 600px; 
-  scroll-snap-align: center;
+  flex: 0 0 80%;
+  max-width: 600px;
+  scroll-snap-align: start;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 .carousel-item video {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; 
 }
 
 @media (min-width: 768px) {
